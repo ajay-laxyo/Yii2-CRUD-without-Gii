@@ -18,23 +18,23 @@ use yii\widgets\LinkPager;
     		<th>Operation</th>
     	</tr>
 
-<hr>
-<ul>
-<?php foreach ($countries as $country): ?>
-    	<tr>
-    		<td><?= Html::encode("{$country->id}") ?></td>
-    		<td><?= Html::encode("{$country->code}") ?></td>
-    		<td><?= Html::encode("{$country->name}") ?></td>
-    		<td><?= Html::encode("{$country->population}") ?></td>
-    		<td><?= Html::a('Update', ['/country/edit', 'id' => $country->id], ['class'=>'btn btn-primary grid-button']) ?>
-    			<?= Html::a('Delete', ['/country/delete', 'id' => $country->id], ['class'=>'btn btn-danger grid-button']) ?>
-    		</td>
-    	</tr>
-    
-<?php endforeach; ?>
-</ul>
-	
-	</table>
-<?= LinkPager::widget(['pagination' => $pagination]) ?>
+    <hr>
+    <ul>
+    <?php foreach ($countries as $country): ?>
+        	<tr>
+        		<td><?= Html::encode("{$country->id}") ?></td>
+        		<td><?= Html::encode("{$country->code}") ?></td>
+        		<td><?= Html::encode("{$country->name}") ?></td>
+        		<td><?= Html::encode("{$country->population}") ?></td>
+        		<td><?= Html::a('Update', ['/country/edit', 'id' => $country->id], ['class'=>'btn btn-primary grid-button']) ?>
+        			<?= Html::a('Delete', ['/country/delete', 'id' => $country->id], ['class'=>'btn btn-danger grid-button']) ?>
+        		</td>
+        	</tr>
+        
+    <?php endforeach; ?>
+    </ul>
+    	
+    	</table>
+    <?= LinkPager::widget(['pagination' => $pagination]) ?>
 
 </div>
